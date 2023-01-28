@@ -38,3 +38,8 @@ PreCommit:
    on_warn: fail # Treat all warnings as failures
    problem_on_unmodified_line: ignore # run RuboCop only on
    command: ['bundle', 'exec', 'rubocop']
+ EsLint:
+   required_executable: 'yarn'
+   enabled: true
+   command: ['npx', 'eslint']
+   args: ['--ext', 'js']
