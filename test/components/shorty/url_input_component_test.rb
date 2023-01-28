@@ -2,11 +2,11 @@
 
 require "test_helper"
 
-class MainNavigation::NavMenuComponentTest < ViewComponent::TestCase
+class Shorty::UrlInputComponentTest < ViewComponent::TestCase
   def test_component_renders_something_useful
     # assert_equal(
     #   %(<span>Hello, components!</span>),
-    #   render_inline(MainNavigation::NavMenuComponent.new(message: "Hello, components!")).css("span").to_html
+    #   render_inline(Shorty::UrlInputComponent.new(message: "Hello, components!")).css("span").to_html
     # )
   end
 end

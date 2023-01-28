@@ -1,1 +1,5 @@
-<div data-controller="main-navigation-component--main-navigation-component">Add MainNavigation template here</div>
+<header data-controller="main-navigation-component--main-navigation-component"
+        class="relative">
+          <%= render MainNavigation::DesktopMenuComponent.new %>
+          <%= render MainNavigation::MobileMenuComponent.new %>
+        </header>
