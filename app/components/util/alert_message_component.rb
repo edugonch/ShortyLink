@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
-class Util::AlertMessageComponent < ViewComponent::Base
-
+module Util
+  class AlertMessageComponent < ViewComponent::Base
+  end
 end

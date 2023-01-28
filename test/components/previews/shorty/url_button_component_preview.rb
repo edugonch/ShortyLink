@@ -1,7 +1,9 @@
 # frozen_string_literal: true
 
-class Shorty::UrlButtonComponentPreview < ViewComponent::Preview
-  def default
-    render(Shorty::UrlButtonComponent.new)
+module Shorty
+  class UrlButtonComponentPreview < ViewComponent::Preview
+    def default
+      render(Shorty::UrlButtonComponent.new)
+    end
   end
 end

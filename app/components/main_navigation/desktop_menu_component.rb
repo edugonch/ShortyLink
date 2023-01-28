@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
-class MainNavigation::DesktopMenuComponent < ViewComponent::Base
-
+module MainNavigation
+  class DesktopMenuComponent < ViewComponent::Base
+  end
 end

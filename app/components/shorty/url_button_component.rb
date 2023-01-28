@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
-class Shorty::UrlButtonComponent < ViewComponent::Base
-
+module Shorty
+  class UrlButtonComponent < ViewComponent::Base
+  end
 end

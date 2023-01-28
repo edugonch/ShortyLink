@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
-class MainNavigation::MobileMenuComponent < ViewComponent::Base
-
+module MainNavigation
+  class MobileMenuComponent < ViewComponent::Base
+  end
 end
