@@ -1,0 +1,14 @@
+{
+    "editor.defaultFormatter": "misogi.ruby-rubocop",
+    "editor.formatOnSave": true,
+    "editor.formatOnSaveTimeout": 5000,
+    "ruby.rubocop.executePath": "",
+    "ruby.format": "rubocop",
+    "[erb]": {
+        "editor.defaultFormatter": "manuelpuyol.erb-linter",
+        "editor.formatOnSave": true
+      },
+      "[html.erb]": {
+        "editor.defaultFormatter": "manuelpuyol.erb-linter"
+      },
+}
