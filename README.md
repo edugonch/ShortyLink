@@ -1,6 +1,11 @@
 # ShortyLink
 ShortyLink is a URL shortening service that allows users to convert long and complicated URLs into short and easy-to-remember links. The service is built on Ruby on Rails framework, and makes use of several other gems and technologies to provide an optimal user experience.
 
+## The algorithm
+The algorithm used is Base Conversion: 
+This algorithm is efficient because it reduces the number of characters required to represent the URL and is fast to encode and decode.
+
+
 ## Features
 - User authentication and authorization
 - Short link generation for long URLs
