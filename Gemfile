@@ -43,6 +43,8 @@ gem 'nokogiri'
 
 gem 'open-uri'
 
+gem 'daemons'
+
 gem 'delayed_job_active_record'
 
 gem 'counter_culture'

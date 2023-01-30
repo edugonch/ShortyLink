@@ -2,7 +2,7 @@
 
 module Shorty
   class UrlResultItemComponent < ViewComponent::Base
-    delegate :turbo_frame_tag, to: :helpers
+    delegate :turbo_stream_from, to: :helpers
 
     def initialize(short_url)
       super

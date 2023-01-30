@@ -1,8 +1,9 @@
-<li data-controller="shorty--url-result-item-component--url-result-item-component">
+<%= turbo_stream_from "short_url_#{@short_url.id}", action: :repplace %>
+<li id="short_url_<%= @short_url.id %>" data-controller="shorty--url-result-item-component--url-result-item-component">
     <div class="flex items-center px-4 py-4 sm:px-6">
       <div class="flex min-w-0 flex-1 items-center">
         <div class="flex-shrink-0">
-          <%= turbo_frame_tag "web_image#{@short_url.id}" %>
+          <img class="h-12 w-12" src="<%= @short_url.logo %>" alt="">
         </div>
         <div class="min-w-0 flex-1 px-4 md:grid md:grid-cols-2 md:gap-4">
           <div>
@@ -13,7 +14,9 @@
               </a>
             </p>
             <p class="mt-2 flex items-center text-sm text-gray-500">
-              <span class="truncate"><%= turbo_frame_tag "web_title#{@short_url.id}" %></span>
+              <span class="truncate">
+              <%= @short_url.title %>
+              </span>
             </p>
           </div>
           <div class="hidden md:block">

@@ -13,6 +13,8 @@ module ShortyLink
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.active_job.queue_adapter = :delayed_job
+
     # Add components path inm propshaft
     initializer 'app_assets', after: 'importmap.assets' do
       Rails.application.config.assets.paths << Rails.root.join('app/components') # for component sidecar js

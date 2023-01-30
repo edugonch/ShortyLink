@@ -10,7 +10,7 @@ class ShortUrlsController < ApplicationController
   def unpack
     @short_url = ShortUrl.find_by!(short_code: params[:id])
     VisitTracker.call(@short_url, request.remote_ip)
-    redirect_to @short_url.original_url
+    redirect_to @short_url.original_url, allow_other_host: true
   end
 
   def show; end

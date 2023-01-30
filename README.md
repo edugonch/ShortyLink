@@ -44,6 +44,7 @@ To get started with ShortyLink, follow these steps:
 - Install required dependencies for the front end using npm install
 - Setup the database using rails db:setup, rails db:migrate
 - Start the application using rails s
+- To run teh background jobs use ./bin/delayed_job run --exit-on-complete
 
 ## License
 ShortyLink is released under the MIT License.

@@ -35,5 +35,6 @@ class ShortUrl < ApplicationRecord
   def generate_short_code
     self.short_code = ShortUrl.encode(id)
     save
+    CrawNewUrlJob.perform_later(original_url, id)
   end
 end
