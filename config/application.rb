@@ -13,12 +13,11 @@ module ShortyLink
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
+    # Add components path inm propshaft
+    initializer 'app_assets', after: 'importmap.assets' do
+      Rails.application.config.assets.paths << Rails.root.join('app/components') # for component sidecar js
+    end
+    # Sweep importmap cache for components
+    config.importmap.cache_sweepers << Rails.root.join('app/components')
   end
 end

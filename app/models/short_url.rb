@@ -2,9 +2,8 @@
 
 class ShortUrl < ApplicationRecord
   validates :original_url, presence: true, format: { with: URI::DEFAULT_PARSER.make_regexp(%w[http https]) }
-  validates :short_code, presence: true, uniqueness: true
 
-  before_validation :generate_short_code, on: :create
+  after_create :generate_short_code
 
   ALPHABET = '23456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ-_'
   BASE = ALPHABET.length
@@ -31,5 +30,6 @@ class ShortUrl < ApplicationRecord
 
   def generate_short_code
     self.short_code = ShortUrl.encode(id)
+    save
   end
 end
