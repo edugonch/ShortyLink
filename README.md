@@ -1,24 +1,49 @@
-# README
+# ShortyLink
+ShortyLink is a URL shortening service that allows users to convert long and complicated URLs into short and easy-to-remember links. The service is built on Ruby on Rails framework, and makes use of several other gems and technologies to provide an optimal user experience.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Features
+- User authentication and authorization
+- Short link generation for long URLs
+- Short link redirection to the original URL
+- Link tracking and statistics
+- User dashboard to view link information
+- API support for programmatic access to ShortyLink services
 
-Things you may want to cover:
+## Technologies
 
-* Ruby version
+- Ruby on Rails
+- PostgreSQL
+- Redis
+- Puma
+- Propshaft
+- Turbo-Rails
+- Stimulus-Rails
+- TailwindCSS-Rails
+- JBuilder
+- DelayedJobActiveRecord
+- CounterCulture
+- Nokogiri
+- Open-URI
+- RQRCode
+- TZInfo-Data
+- Bootsnap
 
-* System dependencies
+## Requirements
 
-* Configuration
+- Ruby version 3.2.0 or higher
+- Rails version 7.0.4 or higher
+- PostgreSQL version 1.1 or higher
+- Redis version 4.0 or higher
 
-* Database creation
+## Getting Started
+To get started with ShortyLink, follow these steps:
 
-* Database initialization
+- Clone the repository git clone https://github.com/edugonch/ShortyLink.git
+- Navigate to the project directory cd ShortyLink
+- Install required dependencies using bundler bundle install
+- Install required dependencies for the front end using npm install
+- Setup the database using rails db:setup, rails db:migrate
+- Start the application using rails s
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## License
+ShortyLink is released under the MIT License.
