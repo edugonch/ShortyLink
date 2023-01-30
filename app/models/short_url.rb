@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
 class ShortUrl < ApplicationRecord
+  has_many :visits, dependent: :destroy
+
   validates :original_url, presence: true, format: { with: URI::DEFAULT_PARSER.make_regexp(%w[http https]) }
 
   after_create :generate_short_code
+
+  counter_culture :visits, column_name: :visits_count
 
   ALPHABET = '23456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ-_'
   BASE = ALPHABET.length

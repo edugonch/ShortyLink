@@ -39,6 +39,14 @@ gem 'view_component'
 
 gem 'heroicon'
 
+gem 'nokogiri'
+
+gem 'open-uri'
+
+gem 'delayed_job_active_record'
+
+gem 'counter_culture'
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 

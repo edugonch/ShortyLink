@@ -1,1 +1,75 @@
-<div data-controller="util--alert-message-component--alert-message-component">Add Util::AlertMessage template here</div>
+<%= turbo_frame_tag "alert" do %>
+  <div data-controller="util--alert-message-component--alert-message-component"
+      data-util--alert-message-component--alert-message-component-target="container"
+      data-transition-enter="transition ease-out duration-100"
+      data-transition-enter-start="transform opacity-0 scale-95"
+      data-transition-enter-end="transform opacity-100 scale-100"
+      data-transition-leave="transition ease-in duration-75"
+      data-transition-leave-start="transform opacity-100 scale-100"
+      data-transition-leave-end="transform opacity-0 scale-95"
+      class="<%= case alert_types[@type]
+                  when :success then 'alert-success-container'
+                  when :danger then 'alert-danger-container'
+                  when :warning then 'alert-warning-container'
+                  when :info then 'alert-info-container'
+                  end %> <%= @class_name %> <%= @render ? '' : 'hidden' %>">
+    <div class="flex">
+      <div class="flex-shrink-0"
+        data-util--alert-message-component--alert-message-component-target="iconContainer">
+        <%= heroicon alert_icons[@type], variant: :solid, options: { class: case alert_types[@type]
+                                                                            when :success then 'alert-success-icon'
+                                                                            when :danger then 'alert-danger-icon'
+                                                                            when :warning then 'alert-warning-icon'
+                                                                            when :info then 'alert-info-icon'
+                                                                            end  } %>
+      </div>
+      <div class="ml-3">
+        <% if @title %>
+          <h3
+            data-util--alert-message-component--alert-message-component-target="titleContainer"
+            class="<%= case alert_types[@type]
+                      when :success then 'alert-success-title'
+                      when :danger then 'alert-danger-title'
+                      when :warning then 'alert-warning-title'
+                      when :info then 'alert-info-title'
+                      end %>"><%= @title %></h3>
+        <% end %>
+        <% if @message %>
+          <div
+            data-util--alert-message-component--alert-message-component-target="messageContainer"
+            class="<%= case alert_types[@type]
+                      when :success then 'alert-success-message'
+                      when :danger then 'alert-danger-message'
+                      when :warning then 'alert-warning-message'
+                      when :info then 'alert-info-message'
+                      end %>">
+          <% if @message.is_a?(Array) %>
+              <ul role="list" class="list-disc pl-5 space-y-1">
+                <% @message.each do |message| %>
+                  <li><%= message %></li>
+                <% end %>
+              </ul>
+          <% else %>
+              <p><%= @message %></p>
+          <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="ml-auto pl-3">
+        <div class="-mx-1.5 -my-1.5">
+          <button type="button"
+                  data-action="click->util--alert-message-component--alert-message-component#closeModal"
+                  class="<%= case alert_types[@type]
+                            when :success then 'alert-success-button'
+                            when :danger then 'alert-danger-button'
+                            when :warning then 'alert-warning-button'
+                            when :info then 'alert-info-button'
+                            end %>">
+            <span class="sr-only">Dismiss</span>
+            <%= heroicon "x-mark", variant: :solid, options: { class: "h-5 w-5" } %>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>

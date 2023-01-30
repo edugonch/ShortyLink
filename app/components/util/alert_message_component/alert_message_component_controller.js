@@ -1,7 +1,10 @@
 import { Controller } from '@hotwired/stimulus'
+import { leave } from 'el-transition'
 
 export default class extends Controller {
-  connect () {
-    console.log('Hello, Stimulus!', this.element)
+  static targets = ['container']
+
+  closeModal () {
+    leave(this.containerTarget)
   }
 }

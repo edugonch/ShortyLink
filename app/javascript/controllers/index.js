@@ -8,9 +8,8 @@ eagerLoadControllersFrom('controllers', application)
 
 const CONTROLLERS = [
   'util--alert-message-component--alert-message-component',
+  'main-navigation-component--main-navigation-component',
   'shorty--url-box-component--url-box-component',
-  'shorty--url-button-component--url-button-component',
-  'shorty--url-input-component--url-input-component',
   'shorty--url-result-box-component--url-result-box-component',
   'shorty--url-result-item-component--url-result-item-component'
 

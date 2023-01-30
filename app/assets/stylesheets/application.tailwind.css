@@ -2,12 +2,88 @@
 @tailwind components;
 @tailwind utilities;
 
-/*
-
 @layer components {
-  .btn-primary {
-    @apply py-2 px-4 bg-blue-200;
-  }
-}
+/***********************
+    ALERT MESSAGE CLASSES
+***********************/
 
-*/
+/**  ALERT DANGER   **/
+  .alert-danger-container{
+      @apply rounded-md bg-danger-50 p-4;
+  }
+  .alert-danger-icon{
+      @apply h-5 w-5 text-danger-400;
+  }
+  .alert-danger-title{
+      @apply text-sm font-medium text-danger-800;
+  }
+  .alert-danger-message{
+      @apply mt-2 text-sm text-danger-700;
+  }
+  .alert-danger-button{
+      @apply inline-flex bg-danger-50 rounded-md p-1.5 text-danger-500 hover:bg-danger-100 focus:outline-none;
+      @apply focus:ring-2 focus:ring-offset-2 focus:ring-offset-info-50 focus:ring-danger-600;
+  }
+  /**  END OF ALERT DANGER   **/
+
+  /**  ALERT SUCCESS   **/
+  .alert-success-container{
+      @apply rounded-md bg-success-50 p-4;
+  }
+  .alert-success-icon{
+      @apply h-5 w-5 text-success-400;
+  }
+  .alert-success-title{
+      @apply text-sm font-medium text-success-800;
+  }
+  .alert-success-message{
+      @apply mt-2 text-sm text-success-700;
+  }
+  .alert-success-button{
+      @apply inline-flex bg-success-50 rounded-md p-1.5 text-success-500 hover:bg-success-100 focus:outline-none;
+      @apply focus:ring-2 focus:ring-offset-2 focus:ring-offset-info-50 focus:ring-success-600;
+  }
+  /**  END OF ALERT SUCCESS   **/
+
+  /**  ALERT WARNING   **/
+  .alert-warning-container{
+      @apply rounded-md bg-warning-50 p-4;
+  }
+  .alert-warning-icon{
+      @apply h-5 w-5 text-warning-400;
+  }
+  .alert-warning-title{
+      @apply text-sm font-medium text-warning-800;
+  }
+  .alert-warning-message{
+      @apply mt-2 text-sm text-warning-700;
+  }
+  .alert-warning-button{
+      @apply inline-flex bg-warning-50 rounded-md p-1.5 text-warning-500 hover:bg-warning-100 focus:outline-none;
+      @apply focus:ring-2 focus:ring-offset-2 focus:ring-offset-info-50 focus:ring-warning-600;
+  }
+  /**  END OF ALERT WARNING   **/
+
+  /**  ALERT INFO   **/
+  .alert-info-container{
+      @apply rounded-md bg-info-50;
+  }
+  .alert-info-icon{
+      @apply h-5 w-5 text-info-400;
+  }
+  .alert-info-title{
+      @apply text-sm font-medium text-info-800;
+  }
+  .alert-info-message{
+      @apply mt-2 text-sm text-info-700;
+  }
+  .alert-info-button{
+      @apply inline-flex bg-info-50 rounded-md p-1.5 text-info-500 hover:bg-info-100 focus:outline-none;
+      @apply focus:ring-2 focus:ring-offset-2 focus:ring-offset-info-50 focus:ring-info-600;
+  }
+  /**  END OF ALERT INFO   **/
+
+  /***********************
+  END OF ALERT MESSAGE CLASSES
+  ***********************/
+}

@@ -5,6 +5,9 @@ class CreateShortUrls < ActiveRecord::Migration[7.0]
     create_table :short_urls do |t|
       t.string :original_url, null: false
       t.string :short_code, null: true
+      t.string :title, null: true
+      t.string :logo, null: true
+      t.integer :visits_count, default: 0
       t.timestamps
     end
 

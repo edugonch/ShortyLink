@@ -1,5 +1,4 @@
 <div
-  data-controller="main-navigation--desktop-menu-component--desktop-menu-component"
   class="bg-gray-900 pt-6">
   <nav
     class="relative mx-auto flex max-w-7xl items-center justify-between px-6"
@@ -16,6 +15,7 @@
         <div class="-mr-2 flex items-center md:hidden">
           <button
             type="button"
+            data-main-navigation-component--main-navigation-component-target="openMenu"
             class="focus-ring-inset inline-flex items-center justify-center rounded-md bg-gray-900 p-2 text-gray-400 hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-white"
             aria-expanded="false">
             <span class="sr-only">Open main menu</span>
@@ -37,20 +37,10 @@
         </div>
       </div>
       <div class="hidden space-x-8 md:ml-10 md:flex">
-        <a href="#" class="text-base font-medium text-white hover:text-gray-300">Product</a>
+        <a href="<%= root_path %>" class="text-base font-medium text-white hover:text-gray-300">Home</a>
 
-        <a href="#" class="text-base font-medium text-white hover:text-gray-300">Features</a>
-
-        <a href="#" class="text-base font-medium text-white hover:text-gray-300">Marketplace</a>
-
-        <a href="#" class="text-base font-medium text-white hover:text-gray-300">Company</a>
+        <a href="<%= top100_short_urls_path %>" class="text-base font-medium text-white hover:text-gray-300">Top 100</a>
       </div>
-    </div>
-    <div class="hidden md:flex md:items-center md:space-x-6">
-      <a href="#" class="text-base font-medium text-white hover:text-gray-300">Log in</a>
-      <a
-        href="#"
-        class="inline-flex items-center rounded-md border border-transparent bg-gray-600 px-4 py-2 text-base font-medium text-white hover:bg-gray-700">Start free trial</a>
     </div>
   </nav>
 </div>
